@@ -21,8 +21,8 @@ def login_api (request):
     if request.method == "POST":
         email=request.POST.get('email')
         password=request.POST.get('password')
-        usuario = Usuario.objects.get(correo=email)
-        if usuario:
+        try:
+            usuario = Usuario.objects.get(correo=email)
             if usuario.clave == password:
                 if usuario.tUsuario == "admin":
                     return redirect("/home-admin")
@@ -32,5 +32,5 @@ def login_api (request):
                     return redirect("/home-estudiante")
             else:
                 return redirect("/login")
-        else:
+        except:
             return redirect("/login")
