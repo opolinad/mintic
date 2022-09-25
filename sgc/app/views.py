@@ -8,8 +8,14 @@ from django.shortcuts import redirect,reverse
 def login (request):
     return render(request, 'login.html')
 
-def home (request):
-    return render(request, 'home.html')
+def home_admin (request):
+    return render(request, 'home-admin.html')
+
+def home_proffesor (request):
+    return render(request, 'home-profesor.html')
+
+def home_student (request):
+    return render(request, 'home-estudiante.html')
 
 def login_api (request):
     if request.method == "POST":
