@@ -1,6 +1,30 @@
 from django.shortcuts import render
+from django.http import JsonResponse
+from .models import Usuario
+from django.shortcuts import redirect,reverse
 
 # Create your views here.
 
 def login (request):
     return render(request, 'login.html')
+
+def home (request):
+    return render(request, 'home.html')
+
+def login_api (request):
+    if request.method == "POST":
+        email=request.POST.get('email')
+        password=request.POST.get('password')
+        usuario = Usuario.objects.get(correo=email)
+        if usuario:
+            if usuario.clave == password:
+                if usuario.tUsuario == "admin":
+                    return redirect("/home-admin")
+                if usuario.tUsuario == "profesor":
+                    return redirect("/home-profesor")
+                if usuario.tUsuario == "estudiante":
+                    return redirect("/home-estudiante")
+            else:
+                return redirect("/login")
+        else:
+            return redirect("/login")
