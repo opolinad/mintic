@@ -1,0 +1,127 @@
+/*
+body {
+background: #000000;  
+background: -webkit-linear-gradient(to right, #434343, #000000); 
+background: linear-gradient(to right, #434343, #000000); 
+}
+*/
+
+.bg-white {
+    background-color: white;
+}
+
+#descripcion {
+    resize: none;
+}
+
+.centrado {
+    text-align: center;
+    vertical-align: middle;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-tabs .nav-link.active {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border: none;    
+    padding: 1rem 3rem 1rem 3rem;
+    border-radius: 0;
+    margin-right: 0.2rem;
+}
+
+.nav-tabs .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    background-color:rgb(209, 209, 209);
+    color: white;
+    padding: 1rem 3rem 1rem 3rem;
+    border-radius: 0;
+    margin-right: 0.2rem;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color:rgb(50, 50, 50);
+}
+
+.twitter {
+    background-color: black;
+    padding: 0.5em;
+    border-radius: 100%;
+}
+
+.facebook {
+    background-color: black;
+    padding: 0.5em;
+    border-radius: 100%;
+}
+
+.instagram {
+    background-color: black;
+    padding: 0.5em;
+    border-radius: 100%;
+}
+
+.youtube {
+    background-color: black;
+    padding: 0.5em;
+    border-radius: 100%;
+}
+
+.navbar-brand {
+    margin-top: 1em;
+}
+
+#iconoemail {
+    margin-left: 2em;
+}
+
+#nota {
+    font-size: 30px;
+}
+
+#cajanotas {
+    border: solid;
+    margin: 0em 0em 1em 0em;
+}
+
+#botones_notas:hover {
+    background-color: red;
+}
+
+#texto_año {
+    margin-right: 1em;
+}
+
+#boton_año:hover {
+    background-color: red;
+}
+
+#estilo_body {
+    opacity: 0.2;
+}
+
+#logo_cole_footer {
+    margin-bottom: 1em;
+}
+
+#logo_head {
+    margin-bottom: 1em;
+}
+
+#footer {
+    padding: 2em 0em 2em 0em;
+    background-color: rgb(244, 244, 244);
+}
+
+#footer_link {
+    color: black;
+}
+
+#footer_link:hover {
+    color: red;
+}
