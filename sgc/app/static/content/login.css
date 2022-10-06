@@ -1,3 +1,64 @@
-h1{
-    color: red;
+.logo-img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 5px;
+    filter: grayscale(1);
+}
+
+.header {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+
+p {
+    margin: 0;
+}
+
+.logos {
+    display: flex;
+    justify-content: end;
+}
+
+#school-logo-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+#school-name {
+    display: inline-block;
+}
+
+.form-container {
+    width: 25vw;
+    margin: 0 auto;
+    max-width: 350px;
+
+}
+
+.btn-container {
+    text-align: center;
+}
+
+button {
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+#img-bkgr {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 400px;
+    width: 400px;
+    filter: opacity(20%);
+    z-index: -1;
+}
+#alert-credentials{
+    display: none;
 }
