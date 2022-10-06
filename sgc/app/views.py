@@ -9,7 +9,7 @@ def login (request):
     return render(request, 'login.html')
 
 def home_admin (request):
-    return render(request, 'home-admin.html')
+    return render(request, 'index2yt.html')
 
 def home_proffesor (request):
     return render(request, 'home-profesor.html')
