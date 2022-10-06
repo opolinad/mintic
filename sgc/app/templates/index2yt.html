@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="sgc/app/content/interface.css">
+    <link href="sgc/app/content/main.css" rel="stylesheet">
+    <link href="descargas/Impact/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Llamado de fuente google fonts -->
+    <!-- Montserrat 700 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+
+    <section id="topbar" class="topbar d-flex align-items-center">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+            <div class="contact-info d-flex align-items-center">
+                <i id="iconomaps" class="bi bi-pin-map d-flex align-items-center">Carrera 14L # 68B 20 sur, Bogotá
+                    Colombia</a></i>
+                <i id="iconoemail" class="bi bi-envelope d-flex align-items-center">contacto@colegiojab.edu.co<a
+                        href="https://www.google.com/maps/place/Colegio+psicopedagogico+monse%C3%B1or+jaime+Alberto+bonilla+nieto/@4.6129979,-74.1334901,17z/data=!3m1!4b1!4m5!3m4!1s0x8e3f9f1b089ae055:0xcf3ee8103acec297!8m2!3d4.6129831!4d-74.1290166"></a></i>
+            </div>
+            <div class="social-links d-none d-md-flex align-items-center">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/colegiojaimebonilla" class="facebook"><i
+                        class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="youtube"><i class="bi bi-youtube"></i></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <nav class="navbar bg-light">
+        <div class="container">
+            <a id="logo_head" class="navbar-brand" href="#">
+                <img src="/img/logocolegio.png" alt="Bootstrap" width="400">
+            </a>
+        </div>
+    </nav>
+
+
+    <div class="container mt-2">
+        <ul class="nav nav-tabs nav-fill justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#home">
+                    Consulta calificaciones <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                        fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    </svg> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#profile">
+                    Editar proyecto <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                        fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    </svg>
+                    </svg> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#contact">
+                    Matrícula estudiantes <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                        fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    </svg> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+
+                        <form>
+                            <h3>Ingrese número de identificación</h3>
+                            <div class="mb-3 col-sm-4 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingrese ID" autofocus>
+                            </div>
+
+                            <div class="mb-3 col-sm-12 col-md-12 col-lg-12 col-xl-12 py-12">
+                                <div class="btn-group dropend">
+                                    <h3 id="texto_año">Reporte del año</h3>
+                                    <button id="boton_año" type="button" class="btn btn-secondary dropdown-toggle"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Seleccione año
+                                    </button>
+
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div id="cajanotas" class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Proyecto 1</h5>
+                                            <p id="nota" class="card-text">3.0 / 5.0</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div id="cajanotas" class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Proyecto 2</h5>
+                                            <p id="nota" class="card-text">3.0 / 5.0</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div id="cajanotas" class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Proyecto 3</h5>
+                                            <p id="nota" class="card-text">3.0 / 5.0</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div id="cajanotas" class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Proyecto 4</h5>
+                                            <p id="nota" class="card-text">3.0 / 5.0</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div id="cajanotas" class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Proyecto 5</h5>
+                                            <p id="nota" class="card-text">3.0 / 5.0</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div id="cajanotas" class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Proyecto 6</h5>
+                                            <p id="nota" class="card-text">3.0 / 5.0</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div id="cajanotas" class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Proyecto 7</h5>
+                                            <p id="nota" class="card-text">3.0 / 5.0</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div id="cajanotas" class="card text-center">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Proyecto 8</h5>
+                                            <p id="nota" class="card-text">3.0 / 5.0</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="profile">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+
+                        <form>
+                            <h3>Ingrese número de identificación</h3>
+                            <div class="mb-3 col-sm-4 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingrese ID" autofocus>
+                            </div>
+                            <h3>Generar reporte</h3>
+                            <div class="mb-3 col-sm-4 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                                <p>Entre</p>
+                                <input type="month" class="form-control" id="mes1" placeholder="Seleccione mes 1">
+                                <br>
+                                <p>y entre</p>
+                                <input type="month" class="form-control" id="mes1" placeholder="Seleccione mes 1">
+                            </div>
+                            <div class="d-grid gap-2 mb-3 col-sm-4 col-md-4 col-lg-4 col-xl-4 py-4">
+                                <button class="btn btn-secondary">Consultar</button>
+                                <button class="btn btn-secondary">Descargar</button>
+                            </div>
+
+                            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 py-4 bg-white">
+                                <h2>Reporte</h2>
+                                <table class="table table-hover table-group-divider">
+                                    <thead>
+                                        <tr>
+                                            <th class="centrado">#</th>
+                                            <th class="centrado">Materia</th>
+                                            <th class="centrado">Calificación obtenida</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td class="centrado">1</td>
+                                            <td class="centrado">Materia 1</td>
+                                            <td class="centrado">3.5 / 5</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="centrado">2</td>
+                                            <td class="centrado">Materia 2</td>
+                                            <td class="centrado">3.5 / 5</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="centrado">3</td>
+                                            <td class="centrado">Materia 3</td>
+                                            <td class="centrado">3.5 / 5</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="centrado">4</td>
+                                            <td class="centrado">Materia 4</td>
+                                            <td class="centrado">3.5 / 5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tab-pane" id="contact">
+                <div class="row border g-0 rounded shadow-sm">
+                    <div class="col p-4">
+
+                        <form>
+                            <h1>Datos personales</h1>
+                            <br>
+                            <h3>Ingrese número de identificación</h3>
+                            <div class="mb-3 col-sm-4 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombres" autofocus>
+                                <br>
+                                <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
+                                <br>
+                                <input type="text" class="form-control" id="no_identificacion" placeholder="Número de identificación">
+                                <br>
+                                <input type="text" class="form-control" id="género" placeholder="Género">
+                                <br>
+                                <input type="text" class="form-control" id="Lugar de expedición" placeholder="Lugar de expedición">
+                                <br>
+                                <input type="date" class="form-control" id="Fecha de expedición" placeholder="Fecha expedición">
+                                <br>
+                                <input type="text" class="form-control" id="Fecha de nacimiento" placeholder="Fecha nacimiento">
+                                <br>
+                                <input type="text" class="form-control" id="Lugar de nacimiento" placeholder="Lugar nacimiento">
+                                <br>
+                            </div>
+
+                            <h3>Contacto</h3>
+                            <div class="mb-3 col-sm-4 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                                <input type="email" class="form-control" id="nombre" placeholder="Ingrese email" autofocus>
+                                <br>
+                                <input type="text" class="form-control" id="direccion" placeholder="Dirección de residencia">
+                                <br>
+                                <input type="text" class="form-control" id="ciudad" placeholder="Ciudad de residencia">
+                                <br>
+                                <input type="tel" class="form-control" id="telefono" placeholder="Teléfono de contacto">
+                                <br>
+                                <input type="tel" class="form-control" id="telefonoacudiente" placeholder="Teléfono de acudiente">
+                            </div>
+
+                            <h3>Documentos</h3>
+                            <div class="mb-3 col-sm-4 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                                <input type="email" class="form-control" id="nombre" placeholder="Ingrese email" autofocus>
+                                <br>
+                                <input type="text" class="form-control" id="direccion" placeholder="Dirección de residencia">
+                                <br>
+                                <input type="text" class="form-control" id="ciudad" placeholder="Ciudad de residencia">
+                                <br>
+                                <input type="text" class="form-control" id="telefono" placeholder="Teléfono de contacto">
+                                <br>
+                                <input type="text" class="form-control" id="telefonoacudiente" placeholder="Teléfono de acudiente">
+                                <br>
+                                <label for="myfile">Cargar pago de matrícula:</label><input type="file" id="matricula" name="myfile">
+                                <label for="myfile">Cargar acta de nacimiento:</label><input type="file" id="acta_nacimiento" name="myfile">
+                                <label for="myfile">Cargar cédula de acudiente:</label><input type="file" id="doc_acudiente" name="myfile">
+                                <label for="myfile">Cargar cédula de acudiente 2:</label><input type="file" id="doc_acudiente2" name="myfile">
+
+                            </div>
+
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+
+    <footer id="footer" class="mt-auto">
+        <div class="container">
+            <div class="row gy-4 ">
+                <div class="col-lg-5 col-md-12 footer-info">
+                    <img id="logo_cole_footer" src="/img/logocolegio.png" alt="logo_colegio" height=100em>
+                    <p class="justify-content-center">La disciplina es el mejor camino para cumplir tus metas.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Estudiantes</h4>
+                    <ul>
+                        <li><a id="footer_link" href="#">Consultar Calificaciones</a></li>
+                        <li><a id="footer_link" href="#">Consultar histórico</a></li>
+                        <li><a id="footer_link" href="#">Auto matrícula</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Docentes</h4>
+                    <ul>
+                        <li><a id="footer_link" href="#">Cargar calificaciones</a></li>
+                        <li><a id="footer_link" href="#">Editar calificaciones</a></li>
+                        <li><a id="footer_link" href="#">Borrar calificaciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4>Contacto</h4>
+                    <p>
+                        Carrera 14L #68B 20 sur <br>
+                        Bogotá Colombia<br><br>
+                        <strong>PBX:</strong> 601 555 5555<br>
+                        <strong>Email:</strong> contacto@colegiojab.edu.co<br>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
