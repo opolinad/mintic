@@ -5,21 +5,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/content/login.css">
 </head>
 
 <body>
-    <h1>Login</h1>
-    <form method="post" action="http://localhost:8000/api/login">
+    <div class="row header">
+        <div class="col-4"></div>
+        <div class="col-6">
+            <p><strong>Dirección: </strong>KR 3 68 B 20 SUR | <strong>Teléfono: </strong>7646290</p>
+        </div>
+        <div class="col-2 logos">
+            <img src="../static/images/twiter.png" alt="twiter logo" class="logo-img">
+            <img src="../static/images/facebook.png" alt="facebook logo" class="logo-img">
+            <img src="../static/images/linkedin.png" alt="linked-in logo" class="logo-img">
+            <img src="../static/images/youtube.png" alt="youtube logo" class="logo-img">
+        </div>
+    </div>
+    <div class="school-logo">
+        <img src="../static/images/logo-colegio.jpg" alt="school-logo" id="school-logo-img">
+        <p id="school-name">Colegio Psicopedagógico <br> Monseñor Jaime Alberto Bonilla</p>
+    </div>
+    <form method="post" action="http://localhost:8000/api/login" class="form-container">
         {% csrf_token %}
-        <label for="email">Correo electrónico:</label>
-        <input type="text" id="email" name="email">
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password">
-        <button>Iniciar sesión</button>
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" class="form-control"
+                placeholder="Introduzca su correo electrónico" required
+                oninvalid="this.setCustomValidity('Este campo debe contener un @ y un dominio')"
+                oninput="this.setCustomValidity('')"
+                title="Este campo debe contener un @ y un dominio">
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" class="form-control"
+                placeholder="Introduzca su contraseña" required
+                oninvalid="this.setCustomValidity('Debe introducir una contraseña')"
+                oninput="this.setCustomValidity('')"
+                title="Debe introducir una contraseña">
+        </div>
+        <div class="alert alert-danger text-center" role="alert" id="alert-credentials">
+            Las credenciales son incorrectas
+        </div>
+        <div class="form-group btn-container">
+            <button>Ingresar</button>
+        </div>
     </form>
+    <div>
+        <img src="../static/images/logo-colegio.jpg" alt="school-logo" id="img-bkgr">
+    </div>
 </body>
 
+<script>
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    if (params.valid) {
+        document.getElementById("alert-credentials").style.display = "inline-block";
+        document.getElementById("alert-credentials").style.width = "100%";
+        setTimeout(() => {
+            document.getElementById("alert-credentials").style.display = "none";
+        }, 5000);
+    }
+
+</script>
 
 </html>
