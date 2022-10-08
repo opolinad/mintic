@@ -6,7 +6,7 @@ from django.shortcuts import redirect,reverse
 # Create your views here.
 
 def main (request):
-    return redirect("/login")
+    return render(request, 'index.html')
 
 def login (request):
     return render(request, 'login.html')
@@ -29,8 +29,6 @@ def login_api (request):
             if usuario.clave == password:
                 if usuario.tUsuario == "admin":
                     return redirect("/home-admin")
-                if usuario.tUsuario == "profesor":
-                    return redirect("/home-profesor")
                 if usuario.tUsuario == "estudiante":
                     return redirect("/home-estudiante")
             else:
