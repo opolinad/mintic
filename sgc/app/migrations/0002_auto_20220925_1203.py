@@ -3,6 +3,13 @@
 from django.db import migrations
 
 def load_user_data(apps, schema_editor):
+    Proyecto = apps.get_model('app', 'Proyecto')
+    proyecto=Proyecto()
+    proyecto.id = 0
+    proyecto.nombre = "default proyecto"
+    proyecto.estado = "activo"
+    proyecto.save()
+
     User = apps.get_model('app', 'Usuario')
     user=User()
     user.id = 123456789
@@ -16,33 +23,22 @@ def load_user_data(apps, schema_editor):
     user.genero="m"
     user.estado=True
     user.save()
+
     User = apps.get_model('app', 'Usuario')
     user2=User()
-    user2.id = 123
+    user2.id = 1234
     user2.tipoIdentificado="CC"
-    user2.tUsuario="profesor"
+    user2.tUsuario="estudiante"
     user2.clave="123"
-    user2.nombre="profesor"
-    user2.apellidos="profesorp"
-    user2.telefono="3001234594"
-    user2.correo="profesor@email.com"
+    user2.nombre="estudiante"
+    user2.apellidos="estudiantep"
+    user2.telefono="3001234527"
+    user2.correo="estudiante@email.com"
     user2.genero="m"
     user2.estado=True
+    user2.idProyecto = proyecto
+    user2.notaDefinitivaProyecto = 4.5
     user2.save()
-    User = apps.get_model('app', 'Usuario')
-    user3=User()
-    user3.id = 1234
-    user3.tipoIdentificado="CC"
-    user3.tUsuario="estudiante"
-    user3.clave="123"
-    user3.nombre="estudiante"
-    user3.apellidos="estudiantep"
-    user3.telefono="3001234527"
-    user3.correo="estudiante@email.com"
-    user3.genero="m"
-    user3.estado=True
-    user3.save()
-
 
 
 

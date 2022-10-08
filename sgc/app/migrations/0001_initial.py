@@ -12,29 +12,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Curso',
-            fields=[
-                ('id', models.IntegerField(primary_key=True, serialize=False)),
-                ('nombre', models.CharField(max_length=50)),
-                ('estado', models.CharField(max_length=20)),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Materia',
-            fields=[
-                ('id', models.IntegerField(primary_key=True, serialize=False)),
-                ('nombre', models.CharField(max_length=20)),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Tarea',
-            fields=[
-                ('id', models.IntegerField(primary_key=True, serialize=False)),
-                ('estado', models.CharField(max_length=20)),
-                ('nombre', models.CharField(max_length=20)),
-            ],
-        ),
-        migrations.CreateModel(
             name='Usuario',
             fields=[
                 ('id', models.IntegerField(primary_key=True, serialize=False)),
@@ -46,6 +23,14 @@ class Migration(migrations.Migration):
                 ('telefono', models.CharField(max_length=20)),
                 ('correo', models.CharField(max_length=20)),
                 ('genero', models.CharField(max_length=20)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Proyecto',
+            fields=[
+                ('id', models.IntegerField(primary_key=True, serialize=False)),
+                ('nombre', models.CharField(max_length=50, unique=True)),
+                ('estado', models.CharField(max_length=20)),
             ],
         ),
     ]
