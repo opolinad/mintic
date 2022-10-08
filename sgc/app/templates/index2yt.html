@@ -22,11 +22,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
 
 </head>
@@ -56,7 +56,7 @@
     <nav class="navbar bg-light">
         <div class="container">
             <a id="logo_head" class="navbar-brand" href="#">
-                <img src="/img/logocolegio.png" alt="Bootstrap" width="400">
+                <img src="../static/images/logocolegio.png" alt="Bootstrap" width="400">
             </a>
         </div>
     </nav>
@@ -74,8 +74,8 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="tab" href="#profile">
-                    Editar proyecto <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                        fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    Editar proyecto <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                         <path
                             d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                     </svg>
@@ -272,49 +272,65 @@
                                 <br>
                                 <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
                                 <br>
-                                <input type="text" class="form-control" id="no_identificacion" placeholder="Número de identificación">
+                                <input type="text" class="form-control" id="no_identificacion"
+                                    placeholder="Número de identificación">
                                 <br>
                                 <input type="text" class="form-control" id="género" placeholder="Género">
                                 <br>
-                                <input type="text" class="form-control" id="Lugar de expedición" placeholder="Lugar de expedición">
+                                <input type="text" class="form-control" id="Lugar de expedición"
+                                    placeholder="Lugar de expedición">
                                 <br>
-                                <input type="date" class="form-control" id="Fecha de expedición" placeholder="Fecha expedición">
+                                <input type="date" class="form-control" id="Fecha de expedición"
+                                    placeholder="Fecha expedición">
                                 <br>
-                                <input type="text" class="form-control" id="Fecha de nacimiento" placeholder="Fecha nacimiento">
+                                <input type="text" class="form-control" id="Fecha de nacimiento"
+                                    placeholder="Fecha nacimiento">
                                 <br>
-                                <input type="text" class="form-control" id="Lugar de nacimiento" placeholder="Lugar nacimiento">
+                                <input type="text" class="form-control" id="Lugar de nacimiento"
+                                    placeholder="Lugar nacimiento">
                                 <br>
                             </div>
 
                             <h3>Contacto</h3>
                             <div class="mb-3 col-sm-4 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
-                                <input type="email" class="form-control" id="nombre" placeholder="Ingrese email" autofocus>
+                                <input type="email" class="form-control" id="nombre" placeholder="Ingrese email"
+                                    autofocus>
                                 <br>
-                                <input type="text" class="form-control" id="direccion" placeholder="Dirección de residencia">
+                                <input type="text" class="form-control" id="direccion"
+                                    placeholder="Dirección de residencia">
                                 <br>
                                 <input type="text" class="form-control" id="ciudad" placeholder="Ciudad de residencia">
                                 <br>
                                 <input type="tel" class="form-control" id="telefono" placeholder="Teléfono de contacto">
                                 <br>
-                                <input type="tel" class="form-control" id="telefonoacudiente" placeholder="Teléfono de acudiente">
+                                <input type="tel" class="form-control" id="telefonoacudiente"
+                                    placeholder="Teléfono de acudiente">
                             </div>
 
                             <h3>Documentos</h3>
                             <div class="mb-3 col-sm-4 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
-                                <input type="email" class="form-control" id="nombre" placeholder="Ingrese email" autofocus>
+                                <input type="email" class="form-control" id="nombre" placeholder="Ingrese email"
+                                    autofocus>
                                 <br>
-                                <input type="text" class="form-control" id="direccion" placeholder="Dirección de residencia">
+                                <input type="text" class="form-control" id="direccion"
+                                    placeholder="Dirección de residencia">
                                 <br>
                                 <input type="text" class="form-control" id="ciudad" placeholder="Ciudad de residencia">
                                 <br>
-                                <input type="text" class="form-control" id="telefono" placeholder="Teléfono de contacto">
+                                <input type="text" class="form-control" id="telefono"
+                                    placeholder="Teléfono de contacto">
                                 <br>
-                                <input type="text" class="form-control" id="telefonoacudiente" placeholder="Teléfono de acudiente">
+                                <input type="text" class="form-control" id="telefonoacudiente"
+                                    placeholder="Teléfono de acudiente">
                                 <br>
-                                <label for="myfile">Cargar pago de matrícula:</label><input type="file" id="matricula" name="myfile">
-                                <label for="myfile">Cargar acta de nacimiento:</label><input type="file" id="acta_nacimiento" name="myfile">
-                                <label for="myfile">Cargar cédula de acudiente:</label><input type="file" id="doc_acudiente" name="myfile">
-                                <label for="myfile">Cargar cédula de acudiente 2:</label><input type="file" id="doc_acudiente2" name="myfile">
+                                <label for="myfile">Cargar pago de matrícula:</label><input type="file" id="matricula"
+                                    name="myfile">
+                                <label for="myfile">Cargar acta de nacimiento:</label><input type="file"
+                                    id="acta_nacimiento" name="myfile">
+                                <label for="myfile">Cargar cédula de acudiente:</label><input type="file"
+                                    id="doc_acudiente" name="myfile">
+                                <label for="myfile">Cargar cédula de acudiente 2:</label><input type="file"
+                                    id="doc_acudiente2" name="myfile">
 
                             </div>
 
@@ -338,7 +354,7 @@
         <div class="container">
             <div class="row gy-4 ">
                 <div class="col-lg-5 col-md-12 footer-info">
-                    <img id="logo_cole_footer" src="/img/logocolegio.png" alt="logo_colegio" height=100em>
+                    <img id="logo_cole_footer" src="../static/images/logocolegio.png" alt="logo_colegio" height=100em>
                     <p class="justify-content-center">La disciplina es el mejor camino para cumplir tus metas.
                     </p>
 

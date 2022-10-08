@@ -35,7 +35,7 @@ p {
     width: 25vw;
     margin: 0 auto;
     max-width: 350px;
-
+    margin-top: 50px;
 }
 
 .btn-container {
@@ -61,4 +61,11 @@ button {
 }
 #alert-credentials{
     display: none;
+}
+#footer-login {
+    padding: 2em 0em 2em 0em;
+    background-color: rgb(244, 244, 244);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
