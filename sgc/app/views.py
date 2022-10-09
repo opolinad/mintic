@@ -27,7 +27,7 @@ def login_api (request):
                 if usuario.tUsuario == "admin":
                     return redirect("/home-admin")
                 if usuario.tUsuario == "estudiante":
-                    return redirect("/home-estudiante")
+                    return redirect("/home-estudiante?id="+str(usuario.id))
             else:
                 return redirect("/login?valid=false")
         except:

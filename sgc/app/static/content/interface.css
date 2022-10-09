@@ -128,3 +128,44 @@ h2 {
 #footer_link:hover {
     color: red;
 }
+
+#button_enviar {
+    padding: 0.3rem;
+    width: 600px;
+    max-width: 100%;
+    background-color: black;
+    color: white;
+}
+
+#button_enviar:hover {
+    padding: 0.3rem;
+    width: 600px;
+    max-width: 100%;
+    background-color: red;
+    color: white;
+}
+
+.titulo_proyecto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
+.nota_proyecto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+}
+
+.boton_submit {
+    width: 600px;
+    max-width: 100%;
+}
+
+.boton_submit:hover {
+    background-color: red;
+    color: white;
+}
+
+.boton_formulario:hover {
+    background-color: black;
+    color: white;
+}
