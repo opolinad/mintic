@@ -57,7 +57,6 @@ def projects_api (request, id=None):
         return JsonResponse({'msg':"Error"})
 
 def users_api (request, id=None):
-    print("Entra users")
     try:
         if request.method == "GET" and id!=None:
             return JsonResponse({'usuario':list(Usuario.objects.filter(id=id).values())})
@@ -76,6 +75,7 @@ def users_api (request, id=None):
                 genero = request.POST.get('genero'),
                 estado = request.POST.get('estado'),
                 idProyecto = request.POST.get('idProyecto'),
+                correo = request.POST.get('correo'),
                 notaDefinitivaProyecto = request.POST.get('notaDefinitivaProyecto')
             )
             return JsonResponse({'msg':"Actulizado"})
@@ -96,7 +96,7 @@ def users_api (request, id=None):
                 idProyecto =Proyecto.objects.get(id=request.POST.get('idProyecto')),
                 notaDefinitivaProyecto =request.POST.get('notaDefinitivaProyecto')
             )
-            return JsonResponse({'msg':"Creado"})
+            return  redirect("/home-admin")
     except Exception as e:
         print('El error es '+ str(e))
         return JsonResponse({'msg':"Error"})
