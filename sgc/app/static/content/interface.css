@@ -131,7 +131,6 @@ h2 {
 
 #button_enviar {
     padding: 0.3rem;
-    width: 600px;
     max-width: 100%;
     background-color: black;
     color: white;
@@ -139,7 +138,6 @@ h2 {
 
 #button_enviar:hover {
     padding: 0.3rem;
-    width: 600px;
     max-width: 100%;
     background-color: red;
     color: white;
