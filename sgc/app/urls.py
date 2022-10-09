@@ -9,6 +9,6 @@ urlpatterns = [
     path('api/login', views.login_api),
     path('api/projects', views.projects_api),
     path('api/projects/<int:id>', views.projects_api),
-    path('api/projects', views.users_api),
+    path('api/users', views.users_api),
     path('api/users/<int:id>', views.users_api),
 ]

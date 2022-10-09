@@ -39,13 +39,14 @@ def projects_api (request, id=None):
             return JsonResponse({'proyecto':list(Proyecto.objects.filter(id=id).values())})
 
         elif request.method == "GET":
-            return JsonResponse({'proyectos':Proyecto.objects.all().values()})
+            return JsonResponse({'proyectos':list(Proyecto.objects.all().values())})
 
         elif request.method == "POST" and request.POST.get('_method') == "PUT":
             project = Proyecto.objects.filter(id=id).update(nombre=request.POST.get('nombre'), estado =request.POST.get('estado') )
             return JsonResponse({'msg':"Actulizado"})
 
         elif request.method == "POST" and request.POST.get('_method') == "DELETE":
+            print(Proyecto.objects.filter(id=id).values())
             Proyecto.objects.filter(id=id).delete()
             return JsonResponse({'msg':"Borrado"})
 
@@ -56,12 +57,13 @@ def projects_api (request, id=None):
         return JsonResponse({'msg':"Error"})
 
 def users_api (request, id=None):
+    print("Entra users")
     try:
         if request.method == "GET" and id!=None:
             return JsonResponse({'usuario':list(Usuario.objects.filter(id=id).values())})
 
         elif request.method == "GET":
-            return JsonResponse({'usuarios':Usuario.objects.all().values()})
+            return JsonResponse({'usuarios':list(Usuario.objects.all().values())})
 
         elif request.method == "POST" and request.POST.get('_method') == "PUT":
             user = Usuario.objects.filter(id=id).update(
@@ -83,6 +85,7 @@ def users_api (request, id=None):
             return JsonResponse({'msg':"Borrado"})
 
         elif request.method == "POST":
+            print("Entra a POST")
             user = Usuario.objects.create(tipoIdentificado=request.POST.get('tipoIdentificado'),
                 tUsuario =request.POST.get('tUsuario'),
                 clave =request.POST.get('clave'),
@@ -90,10 +93,10 @@ def users_api (request, id=None):
                 apellidos =request.POST.get('apellidos'),
                 telefono =request.POST.get('telefono'),
                 genero =request.POST.get('genero'),
-                estado =request.POST.get('estado'),
-                idProyecto =request.POST.get('idProyecto'),
+                idProyecto =Proyecto.objects.get(id=request.POST.get('idProyecto')),
                 notaDefinitivaProyecto =request.POST.get('notaDefinitivaProyecto')
             )
             return JsonResponse({'msg':"Creado"})
-    except:
+    except Exception as e:
+        print('El error es '+ str(e))
         return JsonResponse({'msg':"Error"})
